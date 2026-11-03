@@ -20,24 +20,27 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* Huge Split Name — JUSTIN on left, FRIAS on right, photo in center */}
+      {/* Huge Split Name — JUSTIN and FRIAS flanking the center photo, hugging it */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-[18%] md:top-[33%] z-[1] flex items-baseline justify-between w-full font-display leading-none tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none"
+        className="pointer-events-none absolute inset-x-0 top-[18%] md:top-[33%] z-[1] hidden md:flex items-baseline justify-center w-full font-display leading-none tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none"
         style={{ fontSize: "clamp(54px, 9.4vw, 190px)" }}
         aria-label={portfolioContent.personal.displayName}
       >
-        {/* JUSTIN: left-pinned, white → light gray-blue */}
+        {/* JUSTIN: right-aligned, pushing toward center photo */}
         <span
-          className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent pl-[clamp(8px,2.5vw,32px)]"
-          style={{ letterSpacing: "-0.02em" }}
+          className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent text-right"
+          style={{ letterSpacing: "-0.02em", flex: "1", paddingRight: "clamp(4px,1.2vw,16px)" }}
         >
           JUSTIN
         </span>
 
-        {/* FRIAS: right-pinned, gray-blue → deep navy */}
+        {/* Spacer matching the photo's visual width so names hug the photo edges */}
+        <div style={{ width: "clamp(220px, 30vw, 520px)", flexShrink: 0 }} />
+
+        {/* FRIAS: left-aligned, pushing toward center photo */}
         <span
-          className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent pr-[clamp(8px,2.5vw,32px)]"
-          style={{ letterSpacing: "-0.02em" }}
+          className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent text-left"
+          style={{ letterSpacing: "-0.02em", flex: "1", paddingLeft: "clamp(4px,1.2vw,16px)" }}
         >
           FRIAS
         </span>
