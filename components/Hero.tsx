@@ -20,30 +20,28 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* Huge Split Name — JUSTIN and FRIAS flanking the center photo, hugging it */}
+      {/* ── Desktop only: massive name flanking the photo, letters hugging it ── */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-[18%] md:top-[33%] z-[1] hidden md:flex items-baseline justify-center w-full font-display leading-none tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none"
-        style={{ fontSize: "clamp(54px, 9.4vw, 190px)" }}
+        className="pointer-events-none absolute inset-x-0 top-[28%] z-[1] hidden md:flex items-baseline justify-center w-full font-display leading-none tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none"
+        style={{ fontSize: "clamp(72px, 12.5vw, 230px)" }}
         aria-label={portfolioContent.personal.displayName}
       >
-        {/* JUSTIN: right-aligned, pushing toward center photo */}
-        <span
-          className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent text-right"
-          style={{ letterSpacing: "-0.02em", flex: "1", paddingRight: "clamp(4px,1.2vw,16px)" }}
-        >
-          JUSTIN
-        </span>
+        {/* JUSTIN: fills the left half, right-aligned so it touches the photo */}
+        <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+          <span className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent">
+            JUSTIN
+          </span>
+        </div>
 
-        {/* Spacer matching the photo's visual width so names hug the photo edges */}
-        <div style={{ width: "clamp(220px, 30vw, 520px)", flexShrink: 0 }} />
+        {/* Spacer = photo's on-screen width at 82svh height (476/760 × 82svh ≈ 51svh) */}
+        <div style={{ width: "51svh", flexShrink: 0 }} />
 
-        {/* FRIAS: left-aligned, pushing toward center photo */}
-        <span
-          className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent text-left"
-          style={{ letterSpacing: "-0.02em", flex: "1", paddingLeft: "clamp(4px,1.2vw,16px)" }}
-        >
-          FRIAS
-        </span>
+        {/* FRIAS: fills the right half, left-aligned so it touches the photo */}
+        <div style={{ flex: 1, display: "flex", justifyContent: "flex-start" }}>
+          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent">
+            FRIAS
+          </span>
+        </div>
       </div>
 
       {/* Mobile stacked name (shown only on mobile) */}
@@ -60,8 +58,8 @@ export function Hero() {
         </span>
       </div>
 
-      {/* Justin Cutout Photo */}
-      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
+      {/* Justin Cutout Photo — z-[3] so it renders ON TOP of the name text */}
+      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[3] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
