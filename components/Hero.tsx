@@ -18,14 +18,14 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[100svh] w-full overflow-hidden select-none flex flex-col justify-between"
+      className="relative h-[100svh] min-h-[600px] w-full overflow-hidden select-none"
     >
-      {/* Volumetric Atmosphere & Silhouette Backlight behind the person */}
+      {/* Volumetric Atmosphere & Silhouette Backlight behind the person's head & torso */}
       <div
-        className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 z-[1] w-[clamp(260px,42vw,620px)] h-[clamp(260px,42vw,620px)] rounded-full blur-[70px] sm:blur-[90px] opacity-75"
+        className="pointer-events-none absolute left-1/2 bottom-[22%] sm:bottom-[20%] md:bottom-[15%] -translate-x-1/2 z-[1] w-[clamp(280px,65vw,620px)] h-[clamp(280px,65vw,620px)] rounded-full blur-[70px] sm:blur-[90px] opacity-80"
         style={{
           background:
-            "radial-gradient(circle, rgba(111, 134, 179, 0.32) 0%, rgba(38, 52, 86, 0.28) 50%, transparent 75%)",
+            "radial-gradient(circle, rgba(111, 134, 179, 0.35) 0%, rgba(38, 52, 86, 0.3) 50%, transparent 75%)",
         }}
         aria-hidden="true"
       />
@@ -41,9 +41,9 @@ export function Hero() {
       />
 
       {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
-      <div className="pointer-events-none absolute left-0 right-0 top-[15%] sm:top-[18%] md:top-[28%] lg:top-[30%] z-[1]">
+      <div className="pointer-events-none absolute left-0 right-0 top-[18%] sm:top-[22%] md:top-[28%] lg:top-[30%] z-[1]">
         <div
-          className="w-full max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between md:justify-center items-stretch md:items-baseline md:gap-4 lg:gap-6 font-display text-[17vw] sm:text-[14vw] md:text-[clamp(52px,8.4vw,165px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
+          className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between md:justify-center items-stretch md:items-baseline md:gap-4 lg:gap-6 font-display text-[clamp(44px,14.5vw,70px)] sm:text-[clamp(56px,12vw,95px)] md:text-[clamp(52px,8.4vw,165px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
           aria-label={portfolioContent.personal.displayName}
         >
           {/* JUSTIN: white to light gray-blue */}
@@ -62,8 +62,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Justin Cutout Photo: cinematic depth, drop shadows onto text, and smooth atmospheric fade */}
-      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] h-[52svh] sm:h-[60svh] md:h-[75svh] lg:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
+      {/* Justin Cutout Photo: large & commanding scale on mobile, cinematic depth, and smooth dissolve */}
+      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] h-[72svh] min-h-[460px] sm:h-[78svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
@@ -73,22 +73,19 @@ export function Hero() {
 
       {/* Base Dark Gradient Vignette for seamless bottom melt */}
       <div
-        className="pointer-events-none absolute left-0 right-0 bottom-0 h-24 sm:h-28 md:h-36 z-[3] bg-gradient-to-t from-black via-black/80 to-transparent"
+        className="pointer-events-none absolute left-0 right-0 bottom-0 h-28 sm:h-32 md:h-36 z-[3] bg-gradient-to-t from-black via-black/85 to-transparent"
         aria-hidden="true"
       />
 
-      {/* Invisible spacer for top header on mobile flex layout */}
-      <div className="h-16 w-full pointer-events-none" />
-
-      {/* Bottom Container: aligns with the hero boundaries */}
-      <div className="relative z-10 pointer-events-none pb-[env(safe-area-inset-bottom,16px)] mb-4 sm:mb-6 md:mb-10">
-        <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 sm:gap-5">
+      {/* Bottom Container: anchors perfectly above safe area */}
+      <div className="absolute left-0 right-0 bottom-[4%] sm:bottom-[6%] md:bottom-[8%] z-10 pointer-events-none pb-[env(safe-area-inset-bottom,0px)]">
+        <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-3.5 sm:gap-5">
           {/* Bottom Left: Role & Subrole */}
           <div className="pointer-events-auto max-w-[90vw] md:max-w-none text-left">
-            <h1 className="text-[clamp(17px,2.2vw,32px)] font-bold font-sans tracking-[0.02em] uppercase text-white leading-[1.1] m-0">
+            <h1 className="text-[clamp(17px,2.2vw,32px)] font-bold font-sans tracking-[0.02em] uppercase text-white leading-[1.1] m-0 drop-shadow-md">
               {portfolioContent.personal.role}
             </h1>
-            <p className="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] sm:tracking-[0.3em] text-white/60 uppercase">
+            <p className="mt-1 sm:mt-2 text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] sm:tracking-[0.3em] text-white/60 uppercase">
               {portfolioContent.personal.subRole}
             </p>
           </div>
