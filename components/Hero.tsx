@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { portfolioContent } from "@/data/content";
 
@@ -20,46 +21,28 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* ── Desktop only: massive name flanking the photo, letters hugging it ── */}
+      {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-[28%] z-[1] hidden md:flex items-baseline justify-center w-full font-display leading-none tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none"
-        style={{ fontSize: "clamp(72px, 12.5vw, 230px)" }}
+        className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[34%] z-[5] md:z-[1] flex flex-col md:flex-row justify-between md:justify-center items-stretch md:items-baseline px-4 sm:px-8 md:px-0 md:gap-6 lg:gap-10 font-display text-[21vw] md:text-[clamp(54px,9.4vw,190px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
         aria-label={portfolioContent.personal.displayName}
       >
-        {/* JUSTIN: fills the left half, right-aligned so it touches the photo */}
-        <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-          <span className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent">
-            JUSTIN
-          </span>
-        </div>
-
-        {/* Spacer = photo's on-screen width at 82svh height (476/760 × 82svh ≈ 51svh) */}
-        <div style={{ width: "51svh", flexShrink: 0 }} />
-
-        {/* FRIAS: fills the right half, left-aligned so it touches the photo */}
-        <div style={{ flex: 1, display: "flex", justifyContent: "flex-start" }}>
-          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent">
-            FRIAS
-          </span>
-        </div>
-      </div>
-
-      {/* Mobile stacked name (shown only on mobile) */}
-      <div
-        className="pointer-events-none absolute inset-x-0 top-[16%] z-[5] flex flex-col px-4 font-display leading-[0.9] tracking-[-0.02em] animate-hero-rise motion-reduce:animate-none md:hidden"
-        style={{ fontSize: "21vw" }}
-        aria-hidden="true"
-      >
-        <span className="bg-gradient-to-r from-white via-white/95 to-[#c9d2e6] bg-clip-text text-transparent self-start">
-          JUSTIN
+        {/* JUSTIN: white to light gray-blue */}
+        <span className="bg-gradient-to-r from-white via-white/90 to-[#c9d2e6] bg-clip-text text-transparent self-start md:self-auto">
+          {portfolioContent.personal.firstName}
         </span>
-        <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end">
-          FRIAS
+
+        {/* FRIAS: gray-blue to deep navy */}
+        <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline">
+          FRIA
+          {/* S outline-only without the vertical cursor bar */}
+          <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
+            S
+          </span>
         </span>
       </div>
 
-      {/* Justin Cutout Photo — z-[3] so it renders ON TOP of the name text */}
-      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[3] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
+      {/* Justin Cutout Photo */}
+      <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] md:z-[2] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
@@ -110,3 +93,4 @@ export function Hero() {
     </section>
   );
 }
+
