@@ -16,24 +16,18 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   background-color: #000000;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
-  width: 100%;
-  max-width: 100vw;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   /* 96px squares with 3.5% white lines */
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 96px 96px;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  touch-action: manipulation;
 }
 
 /* Hero Rise Animation: Page-load fade in, slide up, unblur */
@@ -74,3 +68,4 @@ button:focus-visible {
     transition-duration: 0.001ms !important;
   }
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Archivo_Black, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -16,14 +16,6 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: "#000000",
-  viewportFit: "cover",
-};
 
 export const metadata: Metadata = {
   title: "Justin Frias — Frontend Developer",
@@ -88,3 +80,4 @@ export default function RootLayout({
     </html>
   );
 }
+

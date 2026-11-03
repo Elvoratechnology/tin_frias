@@ -10,6 +10,7 @@ import {
   Database,
   Smartphone,
   Sparkles,
+  Terminal,
   Radio,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
@@ -109,13 +110,13 @@ function ToolCard({ item }: { item: ToolItem }) {
     <div
       ref={cardRef}
       onPointerMove={handlePointerMove}
-      className={`group relative overflow-hidden rounded-[16px] border border-white/[0.12] bg-gradient-to-br from-white/[0.07] via-white/[0.02] to-black/70 backdrop-blur-[20px] p-4 sm:p-5 lg:p-6 flex flex-col justify-between transition-all duration-300 hover:border-white/30 hover:scale-[1.01] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_12px_36px_rgba(0,0,0,0.5)] ${
-        item.wide ? "col-span-1 sm:col-span-2 lg:col-span-2" : "col-span-1"
+      className={`group relative overflow-hidden rounded-[16px] border border-white/[0.12] bg-gradient-to-br from-white/[0.07] via-white/[0.02] to-black/70 backdrop-blur-[20px] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:border-white/30 hover:scale-[1.01] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_12px_36px_rgba(0,0,0,0.5)] ${
+        item.wide ? "col-span-1 sm:col-span-2 md:col-span-2" : "col-span-1"
       } before:pointer-events-none before:absolute before:inset-0 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-[radial-gradient(220px_circle_at_var(--mx,50%)_var(--my,0%),rgba(255,255,255,0.18),transparent_70%)]`}
     >
       {/* Top Row: Category Label (Left) and Subtle Icon (Right) */}
-      <div className="flex items-center justify-between gap-2 mb-3 sm:mb-4">
-        <span className="text-[9.5px] sm:text-[10.5px] font-mono font-bold tracking-[0.18em] text-white/50 uppercase select-none">
+      <div className="flex items-center justify-between gap-2 mb-4">
+        <span className="text-[10px] sm:text-[10.5px] font-mono font-bold tracking-[0.2em] text-white/50 uppercase select-none">
           {item.category}
         </span>
         <div className="text-white/40 group-hover:text-white/80 transition-colors">
@@ -125,14 +126,14 @@ function ToolCard({ item }: { item: ToolItem }) {
 
       {/* Middle: Tool Name */}
       <div className="my-auto py-1">
-        <h3 className="font-display text-[17px] sm:text-[20px] lg:text-[21px] text-white leading-tight tracking-tight">
+        <h3 className="font-display text-[18px] sm:text-[21px] text-white leading-tight tracking-tight">
           {item.name}
         </h3>
       </div>
 
       {/* Bottom: Bullet Detail */}
-      <div className="mt-3 pt-2 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono tracking-[0.08em] sm:tracking-[0.1em] text-white/60">
-        <span className="h-1 w-1 rounded-full bg-[#6f86b3] flex-shrink-0" />
+      <div className="mt-3.5 pt-2 flex items-center gap-1.5 text-[10.5px] sm:text-[11px] font-mono tracking-[0.1em] text-white/60">
+        <span className="h-1 w-1 rounded-full bg-[#6f86b3]" />
         <span className="uppercase truncate">{item.detail}</span>
       </div>
     </div>
@@ -144,8 +145,8 @@ export function ToolsSection() {
     <section id="tools" className="pt-20 pb-10">
       <SectionHeading>Tools</SectionHeading>
 
-      {/* Bento Grid: 1 col on mobile, 2 cols on tablets, 4 cols on desktops */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5">
+      {/* Bento Grid: 2 wide cards on row 1, 4 cards on row 2, 4 cards on row 3 */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
         {toolItems.map((item, idx) => (
           <ToolCard key={idx} item={item} />
         ))}
