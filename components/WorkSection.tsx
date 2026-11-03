@@ -9,12 +9,15 @@ export function WorkSection() {
   const { work } = portfolioContent;
 
   return (
-    <section id="work" className="pt-20 pb-8">
+    <section id="work" className="pt-20 pb-10">
       <SectionHeading>{work.title}</SectionHeading>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+      {/* Uniform 3-Column Grid: Worklane, Inky, Resiboss 2.0 all equal */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 items-stretch">
         {work.projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <div key={project.id} className="h-full">
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
     </section>
