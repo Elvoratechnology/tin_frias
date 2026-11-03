@@ -20,8 +20,28 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
+      {/* Volumetric Atmosphere & Silhouette Backlight behind the person */}
+      <div
+        className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 z-[1] w-[clamp(300px,42vw,620px)] h-[clamp(300px,42vw,620px)] rounded-full blur-[90px] opacity-75"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(111, 134, 179, 0.32) 0%, rgba(38, 52, 86, 0.28) 50%, transparent 75%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Grounding Base Glow under the cutout */}
+      <div
+        className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[1] w-[clamp(340px,50vw,700px)] h-[180px] blur-[60px] opacity-60"
+        style={{
+          background:
+            "radial-gradient(ellipse at bottom, rgba(111, 134, 179, 0.25) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
+      />
+
       {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
-      <div className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[30%] z-[5] md:z-[1]">
+      <div className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[30%] z-[1]">
         <div
           className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between md:justify-center items-stretch md:items-baseline md:gap-4 lg:gap-6 font-display text-[21vw] md:text-[clamp(52px,8.4vw,165px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
           aria-label={portfolioContent.personal.displayName}
@@ -31,7 +51,7 @@ export function Hero() {
             {portfolioContent.personal.firstName}
           </span>
 
-          {/* FRIAS: gray-blue to deep navy with subtle, natural space before FRIAS */}
+          {/* FRIAS: gray-blue to deep navy */}
           <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline text-right md:ml-3 lg:ml-4">
             FRIA
             {/* S outline-only without the vertical cursor bar */}
@@ -42,14 +62,20 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Justin Cutout Photo: centered, bottom-aligned, layers in front of name */}
+      {/* Justin Cutout Photo: cinematic depth, drop shadows onto text, and smooth atmospheric fade */}
       <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] md:z-[2] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
-          className="h-full w-auto object-contain object-bottom contrast-[1.05] brightness-[0.96] [mask-image:linear-gradient(to_bottom,#000_68%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,#000_68%,transparent_98%)]"
+          className="h-full w-auto object-contain object-bottom contrast-[1.08] brightness-[0.98] saturate-[1.04] drop-shadow-[0_20px_45px_rgba(0,0,0,0.95)] drop-shadow-[0_0_70px_rgba(38,52,86,0.4)] [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)]"
         />
       </div>
+
+      {/* Base Dark Gradient Vignette for seamless bottom melt */}
+      <div
+        className="pointer-events-none absolute left-0 right-0 bottom-0 h-28 md:h-36 z-[3] bg-gradient-to-t from-black via-black/80 to-transparent"
+        aria-hidden="true"
+      />
 
       {/* Bottom Container: aligns with the hero boundaries */}
       <div className="absolute left-0 right-0 bottom-[5%] md:bottom-[10%] z-10 pointer-events-none">
