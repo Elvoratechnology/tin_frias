@@ -34,8 +34,8 @@ export function Hero() {
         {/* FRIAS: gray-blue to deep navy */}
         <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline">
           FRIA
-          {/* S outline-only with cursor vertical bar on its left */}
-          <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)] border-l-[3px] border-[#263456] pl-[2px] ml-[1px]">
+          {/* S outline-only without the vertical cursor bar */}
+          <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
             S
           </span>
         </span>
