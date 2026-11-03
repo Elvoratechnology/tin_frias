@@ -19,3 +19,4 @@ export function SectionHeading({ children, className }: SectionHeadingProps) {
     </h2>
   );
 }
+

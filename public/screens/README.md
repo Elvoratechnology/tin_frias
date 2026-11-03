@@ -8,3 +8,4 @@ This directory contains static screenshots displayed when the live iframe previe
 3. `resiboss.png` — Screenshot for **Resiboss 2.0** (1280x800 recommended)
 
 To update them, simply drop your full-screen browser screenshots of each project into this `/public/screens` folder with the names above.
+
