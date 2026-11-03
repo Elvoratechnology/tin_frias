@@ -12,8 +12,8 @@ export function WorkSection() {
     <section id="work" className="pt-20 pb-10">
       <SectionHeading>{work.title}</SectionHeading>
 
-      {/* Uniform 3-Column Grid: Worklane, Inky, Resiboss 2.0 all equal */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+      {/* Responsive Grid: 1 col on mobile, 2 cols on tablets/iPads, 3 cols on desktops/Macs */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
         {work.projects.map((project) => (
           <div key={project.id} className="h-full">
             <ProjectCard project={project} />
