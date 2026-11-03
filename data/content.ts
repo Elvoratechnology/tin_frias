@@ -30,6 +30,12 @@ export interface ToolCategory {
   items: string[];
 }
 
+export interface SocialLink {
+  name: string;
+  url: string;
+  username: string;
+}
+
 export const portfolioContent = {
   personal: {
     name: "Justin Lyoid T. Frias",
@@ -193,6 +199,27 @@ export const portfolioContent = {
     email: "justinfrias951@gmail.com",
     phone: "0993-245-5116",
     tel: "tel:+639932455116",
+    socials: [
+      {
+        name: "GitHub",
+        url: "https://github.com/JustinFrias",
+        username: "JustinFrias",
+      },
+      {
+        name: "Facebook",
+        url: "https://www.facebook.com/Justin1031",
+        username: "Justin Frias",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/frias_tintin/",
+        username: "@frias_tintin",
+      },
+      {
+        name: "Twitter / X",
+        url: "https://x.com/Tinn_Ready",
+        username: "@Tinn_Ready",
+      },
+    ] as SocialLink[],
   },
 };
-
