@@ -21,24 +21,28 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
+      {/* Huge Split Name with symmetrical spacing around the center cutout */}
       <div
-        className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[34%] z-[5] md:z-[1] flex flex-col md:flex-row justify-between px-4 sm:px-[clamp(16px,6vw,110px)] font-display text-[21vw] md:text-[clamp(54px,9.4vw,190px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
+        className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[34%] z-[5] md:z-[1] grid grid-cols-1 md:grid-cols-2 w-full font-display text-[21vw] md:text-[clamp(54px,9.4vw,190px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none px-4 sm:px-6 md:px-0"
         aria-label={portfolioContent.personal.displayName}
       >
-        {/* JUSTIN: white to light gray-blue */}
-        <span className="bg-gradient-to-r from-white via-white/90 to-[#c9d2e6] bg-clip-text text-transparent self-start">
-          {portfolioContent.personal.firstName}
-        </span>
-
-        {/* FRIAS: gray-blue to deep navy */}
-        <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline">
-          FRIA
-          {/* S outline-only without the vertical cursor bar */}
-          <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
-            S
+        {/* JUSTIN: white to light gray-blue (right-aligned towards center on desktop) */}
+        <div className="flex justify-start md:justify-end md:pr-[clamp(16px,3.8vw,56px)]">
+          <span className="bg-gradient-to-r from-white via-white/90 to-[#c9d2e6] bg-clip-text text-transparent">
+            {portfolioContent.personal.firstName}
           </span>
-        </span>
+        </div>
+
+        {/* FRIAS: gray-blue to deep navy (left-aligned towards center on desktop) */}
+        <div className="flex justify-end md:justify-start md:pl-[clamp(16px,3.8vw,56px)]">
+          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent flex items-baseline">
+            FRIA
+            {/* S outline-only without cursor vertical bar */}
+            <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
+              S
+            </span>
+          </span>
+        </div>
       </div>
 
       {/* Justin Cutout Photo */}
