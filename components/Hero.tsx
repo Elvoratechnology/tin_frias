@@ -23,7 +23,7 @@ export function Hero() {
       {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
       <div className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[30%] z-[5] md:z-[1]">
         <div
-          className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-stretch md:items-baseline font-display text-[21vw] md:text-[clamp(54px,8.8vw,170px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
+          className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-stretch md:items-baseline md:gap-10 lg:gap-16 font-display text-[21vw] md:text-[clamp(50px,8vw,155px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
           aria-label={portfolioContent.personal.displayName}
         >
           {/* JUSTIN: white to light gray-blue */}
@@ -31,8 +31,8 @@ export function Hero() {
             {portfolioContent.personal.firstName}
           </span>
 
-          {/* FRIAS: gray-blue to deep navy */}
-          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline text-right">
+          {/* FRIAS: gray-blue to deep navy with generous space before FRIAS */}
+          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline text-right md:ml-12 lg:ml-20">
             FRIA
             {/* S outline-only without the vertical cursor bar */}
             <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
