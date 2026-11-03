@@ -23,7 +23,7 @@ export function Hero() {
       {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
       <div className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[30%] z-[5] md:z-[1]">
         <div
-          className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-stretch md:items-baseline md:gap-10 lg:gap-16 font-display text-[21vw] md:text-[clamp(50px,8vw,155px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
+          className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between md:justify-center items-stretch md:items-baseline md:gap-4 lg:gap-6 font-display text-[21vw] md:text-[clamp(52px,8.4vw,165px)] leading-[0.92] md:leading-none tracking-[-0.01em] animate-hero-rise motion-reduce:animate-none"
           aria-label={portfolioContent.personal.displayName}
         >
           {/* JUSTIN: white to light gray-blue */}
@@ -31,8 +31,8 @@ export function Hero() {
             {portfolioContent.personal.firstName}
           </span>
 
-          {/* FRIAS: gray-blue to deep navy with generous space before FRIAS */}
-          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline text-right md:ml-12 lg:ml-20">
+          {/* FRIAS: gray-blue to deep navy with subtle, natural space before FRIAS */}
+          <span className="bg-gradient-to-r from-[#8b9bbd] to-[#263456] bg-clip-text text-transparent self-end md:self-auto flex items-baseline text-right md:ml-3 lg:ml-4">
             FRIA
             {/* S outline-only without the vertical cursor bar */}
             <span className="relative inline-block font-normal text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.55)]">
@@ -51,10 +51,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Bottom Container: perfectly aligns with JUSTIN on the left and FRIAS on the right */}
+      {/* Bottom Container: aligns with the hero boundaries */}
       <div className="absolute left-0 right-0 bottom-[5%] md:bottom-[10%] z-10 pointer-events-none">
         <div className="w-full max-w-[1280px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-5">
-          {/* Bottom Left: Role & Subrole - Aligned with left edge of JUSTIN */}
+          {/* Bottom Left: Role & Subrole */}
           <div className="pointer-events-auto max-w-[85vw] md:max-w-none text-left">
             <h1 className="text-[clamp(18px,2.2vw,32px)] font-bold font-sans tracking-[0.02em] uppercase text-white leading-[1.1] m-0">
               {portfolioContent.personal.role}
@@ -64,7 +64,7 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Bottom Right: DESIGN. BUILD. SHIP. & Buttons - Aligned with right edge of FRIAS */}
+          {/* Bottom Right: DESIGN. BUILD. SHIP. & Buttons */}
           <div className="pointer-events-auto text-left md:text-right w-full md:w-auto">
             {/* Stacked words: hidden on mobile */}
             <div className="hidden md:block font-display text-[clamp(22px,2.4vw,36px)] leading-[1.15] mb-4 text-right">
