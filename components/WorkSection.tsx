@@ -9,10 +9,10 @@ export function WorkSection() {
   const { work } = portfolioContent;
 
   return (
-    <section id="work" className="pt-24 pb-8">
+    <section id="work" className="pt-20 pb-8">
       <SectionHeading>{work.title}</SectionHeading>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         {work.projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -20,4 +20,3 @@ export function WorkSection() {
     </section>
   );
 }
-
