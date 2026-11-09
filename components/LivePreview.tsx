@@ -47,7 +47,10 @@ export function LivePreview({
       {/* Top Left Live Badge */}
       <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
         <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-[0.14em] text-white/90 bg-black/75 backdrop-blur-md border border-white/20 select-none">
-          <span className="h-[6px] w-[6px] rounded-full bg-[#4ade80] shadow-[0_0_8px_#4ade80]" />
+          <span className="relative flex h-[6px] w-[6px]">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4ade80] opacity-75" />
+            <span className="relative inline-flex rounded-full h-[6px] w-[6px] bg-[#4ade80] shadow-[0_0_8px_#4ade80]" />
+          </span>
           LIVE
         </span>
       </div>
@@ -55,7 +58,7 @@ export function LivePreview({
       {/* Frame Container - Compact Aspect Ratio */}
       <div
         ref={containerRef}
-        className={`relative w-full overflow-hidden rounded-xl border border-white/15 bg-[#05070d] shadow-[0_8px_30px_rgba(0,0,0,0.5)] ${
+        className={`relative w-full overflow-hidden rounded-xl border border-white/15 bg-[#05070d] shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-500 group-hover:border-[#4169e1]/50 ${
           wide ? "aspect-[16/9] md:aspect-[16/10]" : "aspect-[16/9.5]"
         }`}
       >

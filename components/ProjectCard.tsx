@@ -23,12 +23,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <GlassCard
       as="article"
-      className="p-4 sm:p-5 flex flex-col justify-between h-full rounded-[20px] transition-all duration-300 hover:border-white/30"
+      className="group p-4 sm:p-5 flex flex-col justify-between h-full rounded-[20px] transition-all duration-300 hover:border-[#4169e1]/60 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_rgba(65,105,225,0.18)]"
     >
       <div className="flex flex-col flex-1">
         {/* Top Header: Tag & Open Link */}
         <div className="flex items-center justify-between gap-2 mb-2.5">
-          <span className="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#6f86b3]/25 border border-[#6f86b3]/60 text-white/90">
+          <span className="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#4169e1]/20 border border-[#4169e1]/50 text-white/95 group-hover:border-[#4169e1]/80 transition-colors">
             {project.tag}
           </span>
 
@@ -38,7 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative overflow-hidden inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-md text-[10px] font-bold tracking-[0.12em] uppercase text-white hover:border-white/40 hover:bg-white/[0.16] transition-all"
+            className="relative overflow-hidden inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-md text-[10px] font-bold tracking-[0.12em] uppercase text-white hover:border-[#4169e1]/60 hover:bg-[#4169e1]/20 transition-all"
           >
             Open ↗
           </a>
@@ -55,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {project.title}
           </h3>
         </a>
-        <p className="text-white/60 text-[12px] leading-snug min-h-[32px] line-clamp-2">
+        <p className="text-white/60 text-[12px] leading-snug h-[34px] line-clamp-2">
           {project.subtitle}
         </p>
 

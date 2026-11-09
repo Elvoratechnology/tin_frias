@@ -11,8 +11,8 @@ export default function HomePage() {
       {/* Hero: 100svh cinematic video editor style */}
       <Hero />
 
-      {/* Main Content Sections */}
-      <main className="max-w-[1080px] mx-auto px-4 sm:px-6 relative z-10">
+      {/* Main Content Sections - Balanced sweet-spot width */}
+      <main className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10">
         <AboutSection />
         <WorkSection />
         <ToolsSection />

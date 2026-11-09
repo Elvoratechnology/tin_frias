@@ -111,10 +111,9 @@ export const portfolioContent = {
         url: "https://worklane-five.vercel.app/",
         screenshot: "/screens/worklane.png",
         bullets: [
-          "Kanban board for organizing, assigning and tracking tasks across workflow stages.",
-          "Roadmap module with an interactive Gantt chart for timelines and progress.",
-          "Real-time sync across every feature so changes appear instantly for all users.",
-          "Tested by an active company team, with features shaped by their feedback.",
+          "Real-time Kanban boards and task tracking.",
+          "Interactive Gantt charts for project roadmaps.",
+          "Instant live sync tested in active company use.",
         ],
       },
       {
@@ -125,9 +124,9 @@ export const portfolioContent = {
         url: "https://inky-tan.vercel.app/",
         screenshot: "/screens/inky.png",
         bullets: [
-          "Share a personal inbox link so others can submit files that need your signature.",
-          "Recipients sign the uploaded document and it returns to the sender automatically.",
-          "Live status updates show both sides every upload, signature and return.",
+          "Shareable inbox links for file signing.",
+          "Automated e-signature and document return.",
+          "Real-time status tracking for both parties.",
         ],
       },
       {
@@ -139,9 +138,9 @@ export const portfolioContent = {
         screenshot: "/screens/resiboss.png",
         wide: true,
         bullets: [
-          "Turns every receipt into smarter spending decisions.",
-          "AI purchase memory keeps track of what you buy.",
-          "Price history shows how prices change over time.",
+          "Smart receipt scanning and spending insights.",
+          "AI purchase memory for automatic expense tracking.",
+          "Price history analytics across past purchases.",
         ],
       },
     ] as Project[],

@@ -4,22 +4,25 @@
 
 :root {
   color-scheme: dark;
-  --bg: #000000;
+  --bg: #0c0d12;
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.62);
   --line: rgba(255, 255, 255, 0.16);
-  --steel: #6f86b3;
-  --deep-navy: #263456;
+  --raven-black: #0c0d12;
+  --royal-blue: #4169e1;
+  --cobalt-blue: #2563eb;
+  --indigo-accent: #6366f1;
+  --cyan-highlight: #38bdf8;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  background-color: #000000;
+  background-color: #0c0d12;
 }
 
 body {
-  background-color: #000000;
+  background-color: #0c0d12;
   color: #ffffff;
   overflow-x: hidden;
   /* 96px squares with 3.5% white lines */
@@ -48,10 +51,89 @@ body {
   animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+/* Background Ambient Living Glow Animations */
+@keyframes slowPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.08) translate(-1.5%, 2%);
+    opacity: 0.72;
+  }
+}
+
+@keyframes slowFloat {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.06) translate(2%, -2%);
+    opacity: 0.62;
+  }
+}
+
+.animate-pulse-glow {
+  animation: slowPulse 12s ease-in-out infinite;
+}
+
+.animate-float-glow {
+  animation: slowFloat 16s ease-in-out infinite;
+}
+
+/* Header & Section Border Beam Animation */
+@keyframes borderBeam {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+}
+
+.animate-border-beam {
+  animation: borderBeam 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-border-beam-slow {
+  animation: borderBeam 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Animated Vertical Line Beam (Quote Box & Indicators) */
+@keyframes lineBeamV {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(240%);
+    opacity: 0;
+  }
+}
+
+.animate-line-beam-v {
+  animation: lineBeamV 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Focus Visible Keyboard Navigation */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline: 2px solid #4169e1;
   outline-offset: 3px;
 }
 
@@ -68,4 +150,3 @@ button:focus-visible {
     transition-duration: 0.001ms !important;
   }
 }
-

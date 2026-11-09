@@ -1,8 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { BackgroundGlow } from "@/components/BackgroundGlow";
+
+export const viewport: Viewport = {
+  themeColor: "#0c0d12",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+};
 
 const archivoBlack = Archivo_Black({
   weight: "400",
@@ -72,7 +80,7 @@ export default function RootLayout({
       lang="en"
       className={`${archivoBlack.variable} ${inter.variable} dark`}
     >
-      <body className="min-h-screen bg-black font-sans text-white antialiased selection:bg-[#6f86b3]/40 selection:text-white">
+      <body className="min-h-screen bg-[#0c0d12] font-sans text-white antialiased selection:bg-[#4169e1]/35 selection:text-white overflow-x-hidden w-full">
         <BackgroundGlow />
         <Header />
         {children}

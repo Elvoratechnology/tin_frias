@@ -51,6 +51,11 @@ export function GlassCard({
       )}
       {...props}
     >
+      {/* Animated Top Border Beam */}
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-[1.5px] overflow-hidden z-20">
+        <div className="animate-border-beam absolute top-0 -left-1/3 h-full w-2/3 bg-gradient-to-r from-transparent via-[#4169e1] via-[60%] to-[#6366f1] opacity-75 blur-[0.5px]" />
+      </div>
+
       {children}
     </Component>
   );
