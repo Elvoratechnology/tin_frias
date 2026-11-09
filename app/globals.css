@@ -4,22 +4,23 @@
 
 :root {
   color-scheme: dark;
-  --bg: #000000;
+  --bg: #0c0d12;
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.62);
   --line: rgba(255, 255, 255, 0.16);
-  --steel: #6f86b3;
-  --deep-navy: #263456;
+  --raven-black: #0c0d12;
+  --powder-blue: #b0e0e6;
+  --poppy-red: #e33d2f;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  background-color: #000000;
+  background-color: #0c0d12;
 }
 
 body {
-  background-color: #000000;
+  background-color: #0c0d12;
   color: #ffffff;
   overflow-x: hidden;
   /* 96px squares with 3.5% white lines */
@@ -51,7 +52,7 @@ body {
 /* Focus Visible Keyboard Navigation */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline: 2px solid #b0e0e6;
   outline-offset: 3px;
 }
 
@@ -68,4 +69,3 @@ button:focus-visible {
     transition-duration: 0.001ms !important;
   }
 }
-

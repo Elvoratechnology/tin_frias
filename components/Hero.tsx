@@ -20,12 +20,12 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* Volumetric Atmosphere & Silhouette Backlight behind the person */}
+      {/* Volumetric Atmosphere & Silhouette Backlight behind the person: Powder Blue with Poppy Red accent halo */}
       <div
         className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 z-[1] w-[clamp(300px,42vw,620px)] h-[clamp(300px,42vw,620px)] rounded-full blur-[90px] opacity-75"
         style={{
           background:
-            "radial-gradient(circle, rgba(111, 134, 179, 0.32) 0%, rgba(38, 52, 86, 0.28) 50%, transparent 75%)",
+            "radial-gradient(circle, rgba(176, 224, 230, 0.40) 0%, rgba(176, 224, 230, 0.22) 42%, rgba(227, 61, 47, 0.22) 62%, transparent 78%)",
         }}
         aria-hidden="true"
       />
@@ -35,7 +35,7 @@ export function Hero() {
         className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[1] w-[clamp(340px,50vw,700px)] h-[180px] blur-[60px] opacity-60"
         style={{
           background:
-            "radial-gradient(ellipse at bottom, rgba(111, 134, 179, 0.25) 0%, transparent 70%)",
+            "radial-gradient(ellipse at bottom, rgba(176, 224, 230, 0.30) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -67,13 +67,13 @@ export function Hero() {
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
-          className="h-full w-auto object-contain object-bottom contrast-[1.08] brightness-[0.98] saturate-[1.04] drop-shadow-[0_20px_45px_rgba(0,0,0,0.95)] drop-shadow-[0_0_70px_rgba(38,52,86,0.4)] [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)]"
+          className="h-full w-auto object-contain object-bottom contrast-[1.08] brightness-[0.98] saturate-[1.04] drop-shadow-[0_0_50px_rgba(176,224,230,0.22)] [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)]"
         />
       </div>
 
       {/* Base Dark Gradient Vignette for seamless bottom melt */}
       <div
-        className="pointer-events-none absolute left-0 right-0 bottom-0 h-28 md:h-36 z-[3] bg-gradient-to-t from-black via-black/80 to-transparent"
+        className="pointer-events-none absolute left-0 right-0 bottom-0 h-28 md:h-36 z-[3] bg-gradient-to-t from-[#0c0d12] via-[#0c0d12]/80 to-transparent"
         aria-hidden="true"
       />
 

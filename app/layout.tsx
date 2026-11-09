@@ -72,7 +72,7 @@ export default function RootLayout({
       lang="en"
       className={`${archivoBlack.variable} ${inter.variable} dark`}
     >
-      <body className="min-h-screen bg-black font-sans text-white antialiased selection:bg-[#6f86b3]/40 selection:text-white">
+      <body className="min-h-screen bg-[#0c0d12] font-sans text-white antialiased selection:bg-[#b0e0e6]/30 selection:text-white">
         <BackgroundGlow />
         <Header />
         {children}

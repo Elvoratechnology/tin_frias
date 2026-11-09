@@ -10,8 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#000000",
+        background: "#0c0d12",
         foreground: "#ffffff",
+        raven: "#0c0d12",
+        powder: "#b0e0e6",
+        poppy: "#e33d2f",
         steel: "#6f86b3",
         "deep-navy": "#263456",
         muted: "rgba(255, 255, 255, 0.62)",
