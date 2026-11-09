@@ -20,26 +20,6 @@ export function Hero() {
       id="home"
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden select-none"
     >
-      {/* Volumetric Atmosphere & Silhouette Backlight behind the person: Powder Blue with Poppy Red accent halo */}
-      <div
-        className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 z-[1] w-[clamp(300px,42vw,620px)] h-[clamp(300px,42vw,620px)] rounded-full blur-[90px] opacity-75"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(176, 224, 230, 0.40) 0%, rgba(176, 224, 230, 0.22) 42%, rgba(227, 61, 47, 0.22) 62%, transparent 78%)",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Grounding Base Glow under the cutout */}
-      <div
-        className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[1] w-[clamp(340px,50vw,700px)] h-[180px] blur-[60px] opacity-60"
-        style={{
-          background:
-            "radial-gradient(ellipse at bottom, rgba(176, 224, 230, 0.30) 0%, transparent 70%)",
-        }}
-        aria-hidden="true"
-      />
-
       {/* Huge Split Name with page-load animation: fades in, slides up, unblurs */}
       <div className="pointer-events-none absolute left-0 right-0 top-[18%] md:top-[30%] z-[1]">
         <div
@@ -62,12 +42,12 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Justin Cutout Photo: cinematic depth, drop shadows onto text, and smooth atmospheric fade */}
+      {/* Justin Cutout Photo: completely clean, no drop shadow or dark halo behind it */}
       <div className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 z-[2] md:z-[2] h-[58svh] md:h-[82svh] max-w-[94vw] md:max-w-none flex items-end justify-center">
         <img
           src="/justin-cutout.png"
           alt="Justin Lyoid Frias"
-          className="h-full w-auto object-contain object-bottom contrast-[1.08] brightness-[0.98] saturate-[1.04] drop-shadow-[0_0_50px_rgba(176,224,230,0.22)] [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)]"
+          className="h-full w-auto object-contain object-bottom contrast-[1.05] brightness-[1.0] [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.85)_78%,transparent_98%)]"
         />
       </div>
 
